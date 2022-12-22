@@ -1,0 +1,7 @@
+[submodule "deps/aleo"]
+	path = deps/crypto/aleo
+	url = https://github.com/aleohq/aleo.git
+	branch = v0.3.2
+[submodule "deps/snarkvm"]
+	path = deps/crypto/snarkvm
+	url = https://github.com/aleohq/snarkvm.git
