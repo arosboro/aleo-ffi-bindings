@@ -25,6 +25,8 @@ use core::{convert::TryFrom, fmt, ops::Deref, str::FromStr};
 
 use ::safer_ffi::prelude::*;
 use safer_ffi::std::string::ToString;
+extern crate no_std_compat as std;
+use std::prelude::v1::*;
 
 #[derive_ReprC]
 #[ReprC::opaque]

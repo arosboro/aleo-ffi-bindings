@@ -13,15 +13,24 @@
 
 // You should have received a copy of the GNU General Public License
 // along with the Aleo library. If not, see <https://www.gnu.org/licenses/>.
+#![no_std]
 #![deny(unsafe_code)]
+
+// pub mod environment;
+
+// pub mod network;
+
+// pub mod types;
+
+// pub mod utilities;
 
 pub mod account;
 
 // The following test function is necessary for the header generation.
-#[::safer_ffi::cfg_headers]
-#[test]
-fn generate_headers() -> ::std::io::Result<()> {
-    ::safer_ffi::headers::builder()
-        .to_file("libaleo.h")?
-        .generate()
-}
+// #[::safer_ffi::cfg_headers]
+// #[test]
+// fn generate_headers() -> ::std::io::Result<()> {
+//     ::safer_ffi::headers::builder()
+//         .to_file("libaleo.h")?
+//         .generate()
+// }

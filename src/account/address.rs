@@ -14,6 +14,7 @@
 // You should have received a copy of the GNU General Public License
 // along with the Aleo library. If not, see <https://www.gnu.org/licenses/>.
 #![deny(unsafe_code)]
+#![no_std]
 
 use crate::account::signature_verify;
 use crate::account::{PrivateKey, Signature, ViewKey};
@@ -23,6 +24,8 @@ use core::{convert::TryFrom, fmt, ops::Deref, str::FromStr};
 
 use ::safer_ffi::prelude::*;
 use safer_ffi::std::string::ToString;
+extern crate no_std_compat as std;
+use std::prelude::v1::*;
 
 #[derive_ReprC]
 #[ReprC::opaque]

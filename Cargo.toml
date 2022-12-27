@@ -14,7 +14,7 @@ keywords = [
 ]
 categories = [ "cryptography::cryptocurrencies", "operating-systems", "embedded-systems" ]
 license = "GPL-3.0"
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -35,23 +35,35 @@ lto = true
 codegen-units = 1
 
 [dependencies]
-safer-ffi = { version = "0.0.10", features = ["proc_macros"] }
+no-std-compat = { version = "0.4.1", features = [ "alloc" ] }
+# once_cell = { version = "1.8.0", features = [ "alloc" ] }
 
 [dependencies.aleo-account]
 version = "0.3.2"
+path = "deps/crypto/aleo/rust/account"
 default-features = false
 
-[dependencies.rand]
-version = "0.8"
-default-features = false
+# [dependencies.snarkvm-wasm]
+# version = "0.9.11"
+# path = "deps/crypto/snarkvm/wasm"
+# default-features = false
 
-[dependencies.anyhow]
-version = "1.0"
-default-features = false
+# [dependencies.aleo-wasm]
+# version = "0.3.2"
+# path = "deps/crypto/aleo/wasm"
+# default-features = false
 
-[dependencies.console_error_panic_hook]
-version = "0.1.7"
-default-features = false
 
-[features]
-c-headers = ["safer-ffi/headers"]
+
+# [dependencies.rand]
+# version = "0.8"
+# default-features = false
+# features =  ["alloc"]
+
+# [dependencies.anyhow]
+# version = "1.0"
+# default-features = false
+
+# [dependencies.console_error_panic_hook]
+# version = "0.1.7"
+# default-features = false

@@ -15,14 +15,18 @@
 // along with the Aleo library. If not, see <https://www.gnu.org/licenses/>.
 #![deny(unsafe_code)]
 
-pub mod address;
-pub use address::*;
+/* implement the cargo crate aleo-account v0.3.2 with #![no_std] without using standard libraries */
+extern crate no_std_compat as std;
+use std::prelude::v1::*;
 
-pub mod private_key;
-pub use private_key::*;
+// pub mod address;
+// pub use address::*;
+
+// pub mod private_key;
+// pub use private_key::*;
 
 pub mod signature;
 pub use signature::*;
 
-pub mod view_key;
-pub use view_key::*;
+// pub mod view_key;
+// pub use view_key::*;
